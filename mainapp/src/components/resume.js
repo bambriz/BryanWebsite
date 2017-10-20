@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+//import styles and from react-bootstrap
 import {navStyle, profStyle, nameStyle, ewStyle, edStyle, projectStyle, skillStyle} from './styles';
 //import { Document, Page } from 'react-pdf';
 //import from react-bootstrap
 import {Button,Jumbotron, Fade, Well, ButtonToolbar, DropdownButton, MenuItem, Carousel, ButtonGroup, Image, Grid, Col, Row} from 'react-bootstrap';
-//import from local components
-import {NavBar} from "./components/navbar";
+//import important variables
+import {name, profPicURL, mySchool, email} from "../App";
 
-const name = "Bryan Erick Ambriz";
-const profPicURL = "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/14670810_1112984392104752_7307663425845533822_n.jpg?oh=797bfc608e298a30022b38872c374be4&oe=5A770341";
-const phoneLink = "tel:+18058242642";
-const phoneNumber = "(805)-824-2642";
-export const email = "beambriz2017@gmail.com";
 
+
+
+/////all the components for Resume
 
 
 
@@ -295,34 +293,3 @@ class Resume extends React.Component {
     );
   }
 }
-
-class ProfilePage extends React.Component {
-  render() {
-    return (
-      <div style={profStyle}>
-
-        <Grid><Row><Col xs={4} md={6}><Image src={profPicURL} circle></Image></Col></Row></Grid>
-
-        <Resume />
-          <a href="https://icons8.com">Icon pack by Icons8</a>
-      </div>
-    );
-  }
-}
-
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div style={navStyle}>
-          <NavBar />
-          <p>Welcome</p>
-        </div>
-        <ProfilePage />
-      </div>
-    );
-  }
-}
-
-export default App;

@@ -3,15 +3,12 @@ import React from 'react';
 const cloudWhite = "#FFFFFE"
 
 export const navStyle = {
-  background: "#ff6f69",
-  color: "#ffeead",
-  borderStyle: "solid",
-  borderWidth: 1,
+  background: "silver",
+  color: "white",
   padding: 5,
   fontFamily : "verdana",
-  fontSize: 40,
-  width: 300,
-  height: 50
+  height: 250,
+  fontSize: 120
 };
 
 export const profStyle = {
