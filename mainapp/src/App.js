@@ -3,11 +3,15 @@ import './App.css';
 import {navStyle, profStyle, nameStyle, ewStyle, edStyle, projectStyle, skillStyle} from './styles';
 //import { Document, Page } from 'react-pdf';
 //import from react-bootstrap
-import {Button,Jumbotron, Fade, Well} from 'react-bootstrap';
+import {Button,Jumbotron, Fade, Well, ButtonToolbar, DropdownButton, MenuItem, Carousel} from 'react-bootstrap';
 
 const name = "Bryan Erick Ambriz";
 const profPicURL = "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/14670810_1112984392104752_7307663425845533822_n.jpg?oh=797bfc608e298a30022b38872c374be4&oe=5A770341";
-
+const phoneLink = "tel:+18058242642";
+const phoneNumber = "(805)-824-2642";
+const email = "beambriz2017@gmail.com";
+const gH = "https://github.com/bambriz";
+const lI = "https://www.linkedin.com/in/bryan-ambriz-5209715a/"
 
 
 class  NavBar extends React.Component {
@@ -15,14 +19,17 @@ class  NavBar extends React.Component {
     const pages = ['Home', 'Resume', 'Media', 'Contact'];
 
     return(
-       <nav >
-         <a style={navStyle} href="../public/index.html">
-           {pages[0]}
-         </a>
-         <a style={navStyle} href="../public/Resume.pdf">{pages[1]}</a>
-         <a style={navStyle} href={"/"+pages[2]}>{pages[2]}</a>
-         <a style={navStyle} href={"/"+pages[3]}>{pages[3]}</a>
-       </nav>
+      <div>
+   <ButtonToolbar>
+     <DropdownButton bsSize="large" title="Conact" id="dropdown-size-large">
+       <MenuItem eventKey="1"><a href={email}>{email}</a></MenuItem>
+       <MenuItem divider />
+       <MenuItem eventKey="2"><a href={gH}>GITHUB</a></MenuItem>
+       <MenuItem divider />
+       <MenuItem eventKey="3"><a href={lI}>LINEDIN</a></MenuItem>
+     </DropdownButton>
+   </ButtonToolbar>
+ </div>
      );
   }
 }
@@ -50,47 +57,63 @@ class WorkExperience extends React.Component {
     return(
       <div >
         <h1 style={edStyle}><strong>Work Experience</strong></h1>
+          <Carousel interval="5000">
+             <Carousel.Item>
+               <img width={900} height={500} alt="900x500" src="https://www.ledr.com/colours/grey.jpg"/>
+               <Carousel.Caption>
+                   <h2 color="black"><strong>QA Intern</strong></h2>
+                   <h2 color="black">Chonic Logic LLC</h2>
+                   <p color="black">01/2014 – 09/2014            Santa Cruz, CA</p>
+                   <p color="black">Chronic Logic LLC was an American independent video game developer and publisher located in Santa Cruz, California, United States.</p>
+                   <h4>Project Description:</h4>
+                 <p>CLIMB! (A 2D mountain climbing arcade game for the Xbox 360).
+                 Contributed code to built-in level editor using C#.
+                 Designed new levels for multiplayer & the main campaign using built-in level editor.
+                 Tested all levels & new features that were added with each version of the game & reported bugs
+               </p>
+               <h6>contact: Kevin Grove <a href="kmg.zhg@gmail.com "> kmg.zhg@gmail.com </a></h6>
+               </Carousel.Caption>
+             </Carousel.Item>
+             <Carousel.Item>
+               <img width={900} height={500} alt="900x500" src="https://www.ledr.com/colours/grey.jpg"/>
+               <Carousel.Caption>
 
-        <Jumbotron >
-        <h2><strong>QA Intern</strong></h2>
-        <h2>Chonic Logic LLC</h2>
-        <p>01/2014 – 09/2014            Santa Cruz, CA</p>
-        <p>Chronic Logic LLC was an American independent video game developer and publisher located in Santa Cruz, California, United States.</p>
-        <h4>Project Description:</h4>
-        <p>CLIMB! (A 2D mountain climbing arcade game for the Xbox 360)</p>
-        <h4>Tasks:</h4>
+                 <h2><strong>Summer Camp Instructor</strong></h2>
+                 <h2>iD Teach Camps</h2>
+                 <p>06/2015 – 08/2015            California</p>
+                 <p>iD Tech is a leader in summer STEM education programs for students ages 6–18. </p>
+                 <h4>Tasks:</h4>
 
-          <p> Designed new levels for multiplayer & the main campaign using built-in level editor</p>
-          <p>Contributed code to built-in level editor using C#</p>
-          <p>Tested all levels & new features that were added with each version of the game & reported bugs</p>
+                   <p> Supervised 8 students at a time</p>
+                   <p>Created & taught courses including: FPS design with Unreal Engine 4,modding minecraft with Java, & level design with Hammer for Team Fortress 2 & Portal 2
+                   </p>
 
-        <h6>contact: Kevin Grove <a href="kmg.zhg@gmail.com "> kmg.zhg@gmail.com </a></h6>
-      </Jumbotron>
 
-        <Jumbotron >
-        <h2><strong>Summer Camp Instructor</strong></h2>
-        <h2>iD Teach Camps</h2>
-        <p>06/2015 – 08/2015            California</p>
-        <p>iD Tech is a leader in summer STEM education programs for students ages 6–18. </p>
-        <h4>Tasks:</h4>
+               </Carousel.Caption>
+             </Carousel.Item>
+             <Carousel.Item>
+               <img width={900} height={500} alt="900x500" src="https://www.ledr.com/colours/grey.jpg"/>
+               <Carousel.Caption>
 
-          <p> Supervised 8 students at a time</p>
-          <p>Created & taught courses including: FPS design with Unreal Engine 4,modding minecraft with Java, & level design with Hammer for Team Fortress 2 & Portal 2
-          </p>
 
-        </Jumbotron>
+                 <h2><strong>Summer Camp Lead Instructor</strong></h2>
+                 <h2>iD Teach Camps</h2>
+                 <p>06/2017 – 08/2017            Santa Clara, CA</p>
+                 <p>iD Tech is a leader in summer STEM education programs for students ages 6–18. </p>
+                 <h4>Tasks:</h4>
 
-        <Jumbotron >
+                   <p> Supervised other instructors and staﬀ while also teaching courses in Unreal Engine 4, Maya, and RPG Maker.
+                   </p>
 
-        <h2><strong>Summer Camp Lead Instructor</strong></h2>
-        <h2>iD Teach Camps</h2>
-        <p>06/2017 – 08/2017            Santa Clara, CA</p>
-        <p>iD Tech is a leader in summer STEM education programs for students ages 6–18. </p>
-        <h4>Tasks:</h4>
+               </Carousel.Caption>
+             </Carousel.Item>
+   </Carousel>
 
-          <p> Supervised other instructors and staﬀ while also teaching courses in Unreal Engine 4, Maya, and RPG Maker.
-          </p>
-        </Jumbotron>
+
+
+
+
+
 
       </div>
     );
@@ -213,10 +236,30 @@ class PersonalProjects extends React.Component {
     return(
     <div  >
       <h1 style={edStyle}><strong>Personal Projects</strong></h1>
+      <Carousel interval={3000}>
+        <Carousel.Item>
+          <img width={900} height={500} alt="900x500" src="https://www.ledr.com/colours/grey.jpg"/>
+          <Carousel.Caption>
+              <CoreCorruption />
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img width={900} height={500} alt="900x500" src="https://www.ledr.com/colours/grey.jpg"/>
+          <Carousel.Caption>
+            <DDS />
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img width={900} height={500} alt="900x500" src="https://www.ledr.com/colours/grey.jpg"/>
+          <Carousel.Caption>
+              <SaMata />
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
 
-      <CoreCorruption />
-      <DDS />
-      <SaMata />
+
+
+
     </div>
   );
   }
@@ -228,7 +271,7 @@ class Skills extends React.Component{
       <div style={skillStyle}>
         <h1><strong>Skills</strong></h1>
 
-        <img src="https://png.icons8.com/javascript-filled/ios7/25" title="JavaScript Filled" width="64" height="64" alt="Js"></img>
+        <img src="https://png.icons8.com/javascript-filled/ios7/25" title="JavaScript Filled" width="64" height="64" alt="Js"></img> <br></br>
         <img src="https://png.icons8.com/react-native-filled/ios7/25" title="React Native Filled" width="64" height="64" alt="React"></img>
         <img src="https://png.icons8.com/c-sharp-logo-filled/ios7/25" title="C Sharp Logo Filled" width="64" height="64" alt="C#"></img>
         <img src="https://png.icons8.com/python-filled/ios7/25" title="Python Filled" width="64" height="64" alt="Python"></img>
@@ -246,9 +289,7 @@ class Resume extends React.Component {
 
   render(){
 
-    const phoneLink = "tel:+18058242642";
-    const phoneNumber = "(805)-824-2642";
-    const email = "beambriz2017@gmail.com";
+
     return(
       <div>
         <NameAndEducation />

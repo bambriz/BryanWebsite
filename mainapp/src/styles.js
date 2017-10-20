@@ -15,7 +15,7 @@ export const navStyle = {
 };
 
 export const profStyle = {
-  background: "lightBlue",
+  background: "white",
   padding: 50,
   fontFamily: "verdana"
 }
