@@ -2,7 +2,7 @@
   "name": "mainapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://bambriz.github.io/BryanWebsite",
+  "homepage": "http://bambriz.github.io/BryanWebsite/mainapp/build/index.html",
   "dependencies": {
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.3",
