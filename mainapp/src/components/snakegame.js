@@ -1,17 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-//this webapp was made from the react template Create-react-app
-ReactDOM.render(<App />, document.getElementById('app'));
 
 
+export class SnakeGame extends React.Component{
+  render(){
+    return();
+  }
+}
 
 /**
- * TODO conver SnakeGame into react code, for now it's just for fun.
- note that I didn't create this SnakeGame from scratch and is only a placeholder that i have modified
- original creator is from here https://codepen.io/CaioPaiola/pen/GFpuK
+ * Namespace
  */
 var Game      = Game      || {};
 var Keyboard  = Keyboard  || {};
@@ -191,15 +188,12 @@ Game.Draw = function(context, snake) {
     this.drawCell(snake.stage.food.x, snake.stage.food.y);
 
     // Draw Score
-    //context.fillText('Points: ' + snake.stage.score, 5, (snake.stage.height - 5));
+    context.fillText('Score: ' + snake.stage.score, 5, (snake.stage.height - 5));
   };
 
   // Draw Cell
   this.drawCell = function(x, y) {
-    var r1 =Math.floor(Math.random() * (250 - 1) + 1) ;
-    var r2 =Math.floor(Math.random() * (250 - 1) + 1) ;
-    var r3 = Math.floor(Math.random() * (250 - 1) + 1);
-    context.fillStyle = 'rgb('+r1+',' +r2+',' +r3+')';
+    context.fillStyle = 'rgb(170, 170, 170)';
     context.beginPath();
     context.arc((x * snake.stage.conf.cw + 6), (y * snake.stage.conf.cw + 6), 4, 0, 2*Math.PI, false);
     context.fill();
@@ -237,7 +231,3 @@ Game.Snake = function(elementId, conf) {
 window.onload = function() {
   var snake = new Game.Snake('stage', {fps: 100, size: 4});
 };
-
-
-
-registerServiceWorker();
