@@ -50,7 +50,7 @@ export const projectStyle = {
 }
 
 export const skillStyle = {
-  background: "#88d8b0",
+  background: "silver",
   borderStyle: "solid",
   borderWidth: 5,
   fontFamily: "verdana"

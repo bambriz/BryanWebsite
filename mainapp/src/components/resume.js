@@ -1,6 +1,6 @@
 import React from 'react';
 //import styles and from react-bootstrap
-import {navStyle, profStyle, nameStyle, ewStyle, edStyle, projectStyle, skillStyle} from './styles';
+import {navStyle, profStyle, nameStyle, ewStyle, edStyle, projectStyle, skillStyle} from '../styles';
 //import { Document, Page } from 'react-pdf';
 //import from react-bootstrap
 import {Button,Jumbotron, Fade, Well, ButtonToolbar, DropdownButton, MenuItem, Carousel, ButtonGroup, Image, Grid, Col, Row} from 'react-bootstrap';
@@ -90,12 +90,6 @@ class WorkExperience extends React.Component {
              </Carousel.Item>
    </Carousel>
 
-
-
-
-
-
-
       </div>
     );
   }
@@ -129,8 +123,6 @@ class CoreCorruption extends React.Component{
            </div>
          </Fade>
        </div>
-
-
  );
  }
 }
@@ -252,12 +244,30 @@ class Skills extends React.Component{
       <div style={skillStyle}>
         <h1><strong>Skills</strong></h1>
 
-        <img src="https://png.icons8.com/javascript-filled/ios7/25" title="JavaScript Filled" width="64" height="64" alt="Js"></img> <br></br>
-        <img src="https://png.icons8.com/react-native-filled/ios7/25" title="React Native Filled" width="64" height="64" alt="React"></img>
-        <img src="https://png.icons8.com/c-sharp-logo-filled/ios7/25" title="C Sharp Logo Filled" width="64" height="64" alt="C#"></img>
-        <img src="https://png.icons8.com/python-filled/ios7/25" title="Python Filled" width="64" height="64" alt="Python"></img>
-        <img src="https://png.icons8.com/c-plus-plus-filled/ios7/25" title="C Plus Plus Filled" width="64" height="64" alt="C++"></img>
-        <img src="https://png.icons8.com/git-filled/ios7/25" title="Git Filled" width="64" height="64" alt="Git"></img>
+        <Grid>
+          <Row>
+            <Col xs={1} md={4}>
+              <p>JavaScript</p><br></br>
+              <p>React.js</p><br></br>
+              <p>React-Bootstrap</p><br></br>
+              <p>HMTL5 && CSS3</p>
+            </Col>
+            <Col xs={2} md={4}>
+              <p>C#</p><br></br>
+              <p>Python</p><br></br>
+              <p>C++</p><br></br>
+              <p>Lua</p>
+
+            </Col>
+            <Col xs={3} md={4}>
+              <p>Git</p><br></br>
+              <p>Corona SDK</p><br></br>
+              <p>Bash</p><br></br>
+              <p>Unity</p>
+
+            </Col>
+          </Row>
+        </Grid>
 
 
 
@@ -266,7 +276,7 @@ class Skills extends React.Component{
   }
 }
 
-class Resume extends React.Component {
+export class Resume extends React.Component {
 
   render(){
 
