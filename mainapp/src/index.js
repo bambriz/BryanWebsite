@@ -13,13 +13,14 @@ ReactDOM.render(<App />, document.getElementById('app'));
  note that I didn't create this SnakeGame from scratch and is only a placeholder that i have modified
  original creator is from here https://codepen.io/CaioPaiola/pen/GFpuK
  */
+ /*
 var Game      = Game      || {};
 var Keyboard  = Keyboard  || {};
 var Component = Component || {};
 
 /**
  * Keyboard Map
- */
+
 Keyboard.Keymap = {
   37: 'left',
   38: 'up',
@@ -29,7 +30,7 @@ Keyboard.Keymap = {
 
 /**
  * Keyboard Events
- */
+
 Keyboard.ControllerEvents = function() {
 
   // Setts
@@ -50,7 +51,7 @@ Keyboard.ControllerEvents = function() {
 
 /**
  * Game Component Stage
- */
+
 Component.Stage = function(canvas, conf) {
 
   // Sets
@@ -80,7 +81,7 @@ Component.Stage = function(canvas, conf) {
 
 /**
  * Game Component Snake
- */
+
 Component.Snake = function(canvas, conf) {
 
   // Game Stage
@@ -127,7 +128,7 @@ Component.Snake = function(canvas, conf) {
 
 /**
  * Game Draw
- */
+
 Game.Draw = function(context, snake) {
 
   // Draw Stage
@@ -217,7 +218,7 @@ Game.Draw = function(context, snake) {
 
 /**
  * Game Snake
- */
+
 Game.Snake = function(elementId, conf) {
 
   // Sets
@@ -233,10 +234,11 @@ Game.Snake = function(elementId, conf) {
 
 /**
  * Window Load
- */
+
 window.onload = function() {
   var snake = new Game.Snake('stage', {fps: 100, size: 4});
 };
+*/
 
 
 
